@@ -1,0 +1,35 @@
+.people-list-container{
+    padding: 1.2rem 1rem 1rem 1rem;
+    font-size: 0;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:700px){
+    .people-list-container-outer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .people-list-container{
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 1rem;
+        justify-content: center;
+    }
+}
+@media screen and (min-width:1100px){
+    .people-list-container{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        width: 1000px;
+    }
+}
+@media screen and (min-width:1500px){
+    .people-list-container{
+        width: 1300px;
+    }
+}
+@media screen and (min-width:1500px){
+    .people-list-container{
+        max-width: 1400px;
+    }
+}

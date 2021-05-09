@@ -1,0 +1,101 @@
+@import './variables.scss';
+
+.menu-primary-enter {
+    position: absolute;
+    opacity: 0;
+}
+.menu-primary-enter-active {
+    opacity: 1;
+    transition: opacity $Speed linear;
+}
+.menu-primary-enter-done {
+    position: absolute;
+}
+.menu-primary-exit {
+    position: absolute;
+    opacity: 1;       
+}
+.menu-primary-exit-active {
+    opacity: 0;
+    transition: opacity $Speed linear;
+}
+.menu-primary-exit-done {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+.main-nav-navbar{
+    position: fixed;
+    z-index: 1500;
+    height: 3.2rem;
+    width: 100%;
+    background-color: $BackgroundColor;
+    font-size: 1.65rem;
+    color: $SecondaryTextColor;
+    font-family: $SecondaryFontStyle;
+    display: flex;
+    justify-content: space-between;
+    .main-nav-back-btn{
+        cursor: pointer;
+        margin: 0 0.5rem;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        text-align: center;
+        background-color: white;
+        vertical-align: middle;
+        &>i{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    a{
+        color: $SecondaryTextColor;
+    }
+    .main-nav-header{
+        padding: 0.5rem 0.8rem;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+    }
+    .main-nav-search-bar{
+        display: flex;
+        align-self: center;
+        margin-right: 1.2rem;
+
+        .main-nav-search-bar-search{
+            padding: 0;
+            border: 0;
+            width: 3rem;
+            height: 1.5rem;
+            border: none;
+            background-color: inherit;
+            text-align: center;
+            color: $SecondaryTextColor;
+            font-weight: 500;
+            border: #000000ad solid 1.5px;
+            border-radius: 8px;
+            transition: all 200ms linear;
+            &::placeholder{
+                color: $SecondaryTextColor;
+                opacity: 0.88;
+                font-weight: 600;
+            }
+            &:focus{
+                -webkit-box-shadow:0 0 6px $SecondaryTextColor;
+                -moz-box-shadow:0 0 5px $SecondaryTextColor;
+                box-shadow:0 0 5px $SecondaryTextColor;
+                width: max-content;
+                text-align: left;
+                width: 4rem;
+                opacity: 1;
+                transition: all 200ms linear;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:270px){
+    .main-nav-header{
+        font-size: 1.2rem;
+    }
+}
